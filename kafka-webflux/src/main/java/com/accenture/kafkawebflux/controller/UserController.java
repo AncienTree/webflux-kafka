@@ -1,4 +1,4 @@
-package com.accenture.kafkawebflux;
+package com.accenture.kafkawebflux.controller;
 
 import com.accenture.kafkawebflux.model.User;
 import com.accenture.kafkawebflux.model.UserDTO;

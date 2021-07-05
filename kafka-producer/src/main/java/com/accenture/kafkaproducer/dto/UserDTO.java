@@ -10,6 +10,9 @@ public class UserDTO {
     private String name;
     private int score;
 
+    public UserDTO() {
+    }
+
     public UserDTO(String name, int score) {
         this.name = name;
         this.score = score;

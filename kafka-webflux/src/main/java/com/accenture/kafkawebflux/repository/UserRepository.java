@@ -1,4 +1,4 @@
-package com.accenture.kafkawebflux;
+package com.accenture.kafkawebflux.repository;
 
 import com.accenture.kafkawebflux.model.User;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;

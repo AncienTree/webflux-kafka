@@ -1,11 +1,10 @@
 package com.accenture.kafkawebflux.service;
 
-import com.accenture.kafkawebflux.UserRepository;
+import com.accenture.kafkawebflux.repository.UserRepository;
 import com.accenture.kafkawebflux.model.User;
 import com.accenture.kafkawebflux.model.UserDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.reactivestreams.Publisher;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -24,6 +23,7 @@ public class UserService {
     }
 
     public Mono<User> create(UserDTO userDTO) {
+        log.info(String.format("Consume rest DTO: %s", userDTO.toString()));
         return userRepository.save(new User(userDTO));
     }
 
